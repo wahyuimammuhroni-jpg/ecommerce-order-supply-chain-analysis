@@ -1264,59 +1264,51 @@ ORDER BY
 
 --     8.2 Pareto Analysis
 WITH seller_sales AS (
-
-SELECT
-
-  seller_id,
-
-  SUM(price) AS total_sales
-
-FROM `projek-muhroni-dqlab.ecommerce.order_items`
-
-GROUP BY
-  seller_id
-
+    SELECT
+        seller_id,
+        SUM(price) AS total_sales
+    FROM `projek-muhroni-dqlab.ecommerce.order_items`
+    GROUP BY seller_id
 ),
 
-seller_rank AS (
+ranked_sellers AS (
+    SELECT
+        seller_id,
+        total_sales,
 
-SELECT
+        ROW_NUMBER() OVER (
+            ORDER BY total_sales DESC
+        ) AS seller_rank,
 
-  seller_id,
+        COUNT(*) OVER () AS total_sellers,
 
-  total_sales,
+        SUM(total_sales) OVER (
+            ORDER BY total_sales DESC
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+        ) AS cumulative_sales,
 
-  SUM(total_sales)
-  OVER(
-    ORDER BY total_sales DESC
-  ) AS cumulative_sales,
+        SUM(total_sales) OVER () AS overall_sales
 
-  SUM(total_sales)
-  OVER() AS overall_sales
-
-FROM seller_sales
-
+    FROM seller_sales
 )
 
 SELECT
+    seller_id,
+    total_sales,
 
-  seller_id,
+    ROUND(
+        SAFE_DIVIDE(seller_rank, total_sellers) * 100,
+        2
+    ) AS cumulative_seller_percentage,
 
-  ROUND(total_sales,2) AS total_sales,
+    ROUND(
+        SAFE_DIVIDE(cumulative_sales, overall_sales) * 100,
+        2
+    ) AS cumulative_sales_percentage
 
-  ROUND(
+FROM ranked_sellers
 
-    cumulative_sales /
-    overall_sales * 100,
-
-    2
-
-  ) AS cumulative_percentage
-
-FROM seller_rank
-
-ORDER BY
-  total_sales DESC;
+ORDER BY seller_rank;
 
 
 --     8.3 Product Ranking Performance
