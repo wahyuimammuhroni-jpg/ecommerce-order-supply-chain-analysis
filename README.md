@@ -214,6 +214,12 @@ Maintain a reliable credit-card payment experience while evaluating installment 
 
 ---
 
+# Skills Demonstrated
+
+Data Cleaning • Data Validation • Feature Engineering • SQL • BigQuery • Relational Analysis • CTE • Window Functions • KPI Analysis • Customer Segmentation • Pareto Analysis • Data Visualization • Business Insights • Data Storytelling
+
+---
+
 # Project Structure
 
 ```text
