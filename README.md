@@ -177,6 +177,33 @@ The **top 20% of sellers contribute approximately 86% of total sales**, showing 
 
 ---
 
+## Interactive Looker Studio Dashboard
+
+An interactive business performance dashboard was developed in Looker Studio using Google BigQuery as the data source.
+
+The dashboard provides an interactive overview of:
+
+- Delivered orders and sales performance
+- Average order value and late delivery rate
+- Monthly delivered sales trends
+- Product category performance
+- Customer distribution by city
+- State-level sales and delivery performance
+- Seller performance
+- Payment method distribution
+
+Interactive filters were also implemented for date range, product category, and customer state.
+
+### Executive KPI Dashboard
+
+![Looker Studio Executive KPI Dashboard](images/09_looker_studio_executive_kpi.png)
+
+### Business Performance Dashboard
+
+![Looker Studio Business Performance Dashboard](images/10_looker_studio_business_performance.png)
+
+---
+
 # Key Insights
 
 - Sales performance is strongly related to overall order volume.
@@ -243,3 +270,5 @@ ecommerce-order-supply-chain-analysis/
     ├── 06_top_10_sellers_by_sales.png
     ├── 07_payment_method_distribution.png
     └── 08_pareto_analysis.png
+    └── 09_looker_studio_executive_kpi.png
+    └── 10_looker_studio_business_performance.png
