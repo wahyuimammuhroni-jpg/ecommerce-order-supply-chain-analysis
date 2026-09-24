@@ -248,7 +248,7 @@ Maintain a reliable credit-card payment experience while evaluating installment 
 
 # Skills Demonstrated
 
-**Data Cleaning • Data Validation • Feature Engineering • SQL • BigQuery • Relational Analysis • CTE • Window Functions • KPI Analysis • Customer Segmentation • Pareto Analysis • Data Visualization • Business Insights • Data Storytelling**
+**Data Cleaning • Data Validation • Feature Engineering • SQL • BigQuery • Relational Analysis • CTE • Window Functions • KPI Analysis • Customer Segmentation • Pareto Analysis • Data Visualization • Business Insights • Dashboard Development • Data Storytelling**
 
 ---
 
@@ -265,6 +265,7 @@ ecommerce-order-supply-chain-analysis/
 │
 ├── sql/
 │   └── ecommerce_analysis.sql
+|   └── looker_dashboard.sql
 │
 └── images/
     ├── 01_executive_kpi.png
