@@ -205,7 +205,7 @@ Interactive filters were also implemented for date range, product category, and 
 
 ### Live Dashboard
 
-[View Interactive Looker Studio Dashboard](https://datastudio.google.com/reporting/84e2609c-7664-4873-9d70-10e316d8135d)
+[View Interactive Looker Studio Dashboard](https://bit.ly/e-commerce_supply_chain_dashboard)
 
 ---
 
