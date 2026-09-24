@@ -202,6 +202,10 @@ Interactive filters were also implemented for date range, product category, and 
 
 ![Looker Studio Business Performance Dashboard](images/10_looker_studio_business_performance.png)
 
+### Live Dashboard
+
+[View Interactive Looker Studio Dashboard](bit.ly/e-commerce_supply_chain_dashboard)
+
 ---
 
 # Key Insights
