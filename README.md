@@ -51,6 +51,7 @@ After validating duplicated product records, the Products dataset was reduced to
 - **Google Colab**
 - **Google BigQuery**
 - **SQL**
+- **Google Looker Studio**
 
 ---
 
